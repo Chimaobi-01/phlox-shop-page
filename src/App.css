@@ -18,3 +18,9 @@
   font-weight: 900;
   font-style: normal;
 } */
+
+.custom-grid {
+  grid-template-columns: repeat(4, minmax(345px, 1fr));
+  grid-column: 1 / span 2;
+  grid-auto-rows: 460px;
+}
