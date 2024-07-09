@@ -18,6 +18,7 @@ import earpiece from "../assets/earpiece.png";
 import laptopGold from "../assets/laptopGold.png";
 import greenWristWatch from "../assets/greenWristWatch.png";
 import hotHeadphone from "../assets/hot-headphone.png";
+import hotHeadphone2 from "../assets/hot-headphone2.png";
 
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -27,6 +28,7 @@ import HotDeals from "../components/HotDeals";
 import Services from "../components/Services";
 import Products from "../components/Products";
 import Footer from "../components/Footer";
+import Categories from "../components/Categories";
 
 
 export {
@@ -38,6 +40,7 @@ export {
   Services,
   Products,
   Footer,
+  Categories
 };
 
 export const category = {
@@ -127,8 +130,8 @@ export const hotDeals = {
     description:
       "No wahala for summer heat. Jam to your favorite beats with our headphone discount sale.",
     bgColor: "#C33044",
-    productImage: hotHeadphone,
-    positionImage: "bottom-36 scale-110",
+    productImage: hotHeadphone2,
+    positionImage: "bottom-36 scale-150 right-8",
   },
   blackFriday: {
     mainHeading: "mega deals",
@@ -138,7 +141,7 @@ export const hotDeals = {
       "Detty December don reach! Get all the latest tech at mega discounts.",
     productImage: greenWristWatch,
     bgColor: "#3C6351",
-    positionImage: "bottom-24 scale-150",
+    positionImage: "bottom-24 scale-150 right-4",
   },
 };
 

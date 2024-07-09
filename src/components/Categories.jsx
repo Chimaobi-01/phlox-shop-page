@@ -2,7 +2,7 @@ import { category, ProductDetailCardA, ProductDetailCardB } from "../utils/data"
 
 const Categories = () => {
   return (
-    <section className="min-h-screen m-10 my-24 flex flex-col justify-between gap-24">
+    <section className="min-h-screen m-10 mt-20 flex flex-col justify-between gap-20">
       <div className=" gap-6 flex h-[400px]">
         <ProductDetailCardA {...category.phone} />
         <ProductDetailCardA {...category.gadgets} />

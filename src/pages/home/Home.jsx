@@ -7,7 +7,8 @@ import {
   HotDeals,
   Services,
   Products,
-  Footer
+  Footer,
+  Categories
 } from "../../utils/data";
 
 const Home = () => {
@@ -15,15 +16,15 @@ const Home = () => {
     <div>
       <Header />
       <Hero />
-
-      <section className="min-h-screen m-10 my-24 flex flex-col overflow-hidden">
+      <Categories />
+      <section className="min-h-screen mx-10 flex flex-col overflow-hidden">
         <Services />
         <HotDeals {...hotDeals.summer} />
       </section>
 
       <Products />
 
-      <div className="h-screen flex items-center mx-10">
+      <div className="pt-48 pb-16 flex items-center mx-10">
         <HotDeals {...hotDeals.blackFriday} />
       </div>
         <Sponsors />
