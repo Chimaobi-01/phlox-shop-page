@@ -17,8 +17,8 @@ import iphoneNew from "../assets/iphoneNew.png";
 import earpiece from "../assets/earpiece.png";
 import laptopGold from "../assets/laptopGold.png";
 import greenWristWatch from "../assets/greenWristWatch.png";
-import hotHeadphone from "../assets/hot-headphone.png";
 import hotHeadphone2 from "../assets/hot-headphone2.png";
+
 
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -204,4 +204,33 @@ export const products = [
   },
 ];
 
-
+export const relatedProducts = [
+  {
+    id: 1,
+    price: 77600,
+    title: "New S150 Adjustable Drone",
+    rating: 11.6,
+    image: drone,
+  },
+  {
+    id: 2,
+    price: 45000,
+    title: "Oculus Quest 2 VR",
+    rating: 2.4,
+    image: vrg,
+  },
+  {
+    id: 3,
+    price: 918739,
+    title: "Samsung 55inch Ultra HD",
+    rating: 28,
+    image: ledTv,
+  },
+  {
+    id: 4,
+    price: 350000,
+    title: "Canon 550D  Digital Camera",
+    rating: 4,
+    image: camera,
+  }
+];
