@@ -20,7 +20,7 @@ const ProductDetailCardA = ({
           <span className="font-semibold text-3xl mb-2">{subHeading}</span>
           <span
             style={{ color: headingColor }}
-            className="font-extrabold text-4xl uppercase font-Montserrat"
+            className="font-extrabold text-3xl uppercase font-Montserrat"
           >
             {heading}
           </span>

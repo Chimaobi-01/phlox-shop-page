@@ -15,7 +15,7 @@ const ProductDetailCardB = ({
           <span className="font-normal text-xl ">{tag}</span>
           <span className="font-semibold text-4xl mb-2">{subHeading}</span>
           <span
-            className="font-extrabold text-[#D5D9E1] text-6xl uppercase font-Montserrat"
+            className="font-extrabold text-[#D5D9E1] text-5xl uppercase font-Montserrat"
           >
             {heading}
           </span>

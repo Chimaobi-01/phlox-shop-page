@@ -9,7 +9,7 @@ const Hero = () => {
           <h1 className="flex flex-col font-Poppins mb-6">
             <span className="font-medium text-3xl mb-4">Beats by Dre</span>
             <span className=" font-bold text-7xl">Wireless</span>
-            <span className="font-Montserrat font-bold text-[9.8rem] text-white">
+            <span className="font-Montserrat font-bold text-[8.5rem] text-white">
               HEADPHONES
             </span>
           </h1>

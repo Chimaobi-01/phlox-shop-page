@@ -61,21 +61,21 @@ export const category = {
     heading: "gadgets",
     itemImage: wristwatch,
     customImagePosition:
-      "h-[71.66%] max-w-[66.66%] -top-[3.3rem] -right-1 rotate-[24deg]",
+      "h-[65.66%] max-w-[66.66%] -top-[3.5rem] -right-1 rotate-[24deg]",
   },
   laptops: {
     tag: "trending",
     subHeading: "devices",
     heading: "laptop",
     itemImage: laptop,
-    customImagePosition: "scale-y-125 right-10 scale-x-110",
+    customImagePosition: "scale-y-125 right-6 scale-x-110",
   },
   games: {
     tag: "best",
     subHeading: "gaming",
     heading: "console",
     itemImage: playstation,
-    customImagePosition: "bottom-16 scale-y-110 right-6 ",
+    customImagePosition: "bottom-12 scale-x-105 scale-y-125 right-0 ",
   },
   charging: {
     bgColor: "#6C87A5",
@@ -85,7 +85,7 @@ export const category = {
     heading: "powerbank",
     itemImage: powerbank,
     customImagePosition:
-      "h-[90.66%] max-w-[99.66%] -top-[5rem] right-0 scale-125 -rotate-[14deg]",
+      "h-[90.66%] w-full -top-[5rem] -right-4 scale-125 -rotate-[14deg]",
   },
   speaker: {
     bgColor: "#C33044",
@@ -95,7 +95,7 @@ export const category = {
     heading: "speakers",
     itemImage: speaker,
     customImagePosition:
-      "h-[70.66%] max-w-[66.66%] -top-[1.5rem] right-0 scale-125",
+      "h-[70.66%] max-w-[66.66%] -top-[2rem] -right-2 scale-110",
   },
 };
 
@@ -141,7 +141,7 @@ export const hotDeals = {
       "Detty December don reach! Get all the latest tech at mega discounts.",
     productImage: greenWristWatch,
     bgColor: "#3C6351",
-    positionImage: "bottom-24 scale-150 right-4",
+    positionImage: "bottom-24 scale-125 -right-2",
   },
 };
 
