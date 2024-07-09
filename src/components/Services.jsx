@@ -2,7 +2,7 @@ import { services } from "../utils/data";
 
 const Services = () => {
   return (
-    <ul className="flex items-center justify-between">
+    <ul className="flex items-center justify-between pt-10 pb-48">
       {services.map((service, index) => (
         <li key={index} className="flex items-center gap-4">
           <img src={service.icon} alt="icon" />

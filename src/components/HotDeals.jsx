@@ -1,4 +1,3 @@
-import productImage from "../assets/hot-headphone.png";
 
 const HotDeals = ({
   mainHeading,
@@ -6,14 +5,16 @@ const HotDeals = ({
   secondHeading,
   description,
   bgColor,
+  productImage,
+  positionImage
 }) => {
   return (
     <article
       style={{ backgroundColor: bgColor }}
-      className="h-[30rem] rounded-[60px] flex justify-between items-center text-white relative "
+      className="h-[30rem] rounded-[60px] flex justify-between items-center text-white relative"
     >
       <span className="absolute inset-0 flex justify-center">
-        <img src={productImage} alt="hot deal" className="relative bottom-36 scale-110" />
+        <img src={productImage} alt="hot deal" className={`relative ${positionImage}`} />
       </span>
       <h4 className="flex flex-col basis-[460px] font-Montserrat ps-16">
         <span className="font-normal text-4xl">20% off</span>

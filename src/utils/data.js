@@ -8,13 +8,37 @@ import support from "../assets/support.svg";
 import verified from "../assets/verified.svg";
 import shipping from "../assets/shipping.svg";
 import secure from "../assets/secure.svg";
+import drone from "../assets/drone.png";
+import vrg from "../assets/vrg.png";
+import ledTv from "../assets/ledTv.png";
+import camera from "../assets/camera.png";
+import nokia from "../assets/nokia.png";
+import iphoneNew from "../assets/iphoneNew.png";
+import earpiece from "../assets/earpiece.png";
+import laptopGold from "../assets/laptopGold.png";
+import greenWristWatch from "../assets/greenWristWatch.png";
+import hotHeadphone from "../assets/hot-headphone.png";
 
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import ProductDetailCardA from "../components/ProductDetailCardA";
 import ProductDetailCardB from "../components/ProductDetailCardB";
+import HotDeals from "../components/HotDeals";
+import Services from "../components/Services";
+import Products from "../components/Products";
+import Footer from "../components/Footer";
 
-export { Header, Hero, ProductDetailCardA, ProductDetailCardB };
+
+export {
+  Header,
+  Hero,
+  ProductDetailCardA,
+  ProductDetailCardB,
+  HotDeals,
+  Services,
+  Products,
+  Footer,
+};
 
 export const category = {
   phone: {
@@ -100,13 +124,81 @@ export const hotDeals = {
     mainHeading: "hot sales",
     promoDate: "15 March - 16  April",
     secondHeading: "Summer Sale",
-    description: "No wahala for summer heat. Jam to your favorite beats with our headphone discount sale.",
-    bgColor:"#C33044"
+    description:
+      "No wahala for summer heat. Jam to your favorite beats with our headphone discount sale.",
+    bgColor: "#C33044",
+    productImage: hotHeadphone,
+    positionImage: "bottom-36 scale-110",
   },
   blackFriday: {
-    mainHeading: "",
-    promoDate: "",
-    secondHeading: "",
-    description: "",
+    mainHeading: "mega deals",
+    promoDate: "15 Nov to 13  Dec",
+    secondHeading: "Black Friday Sale",
+    description:
+      "Detty December don reach! Get all the latest tech at mega discounts.",
+    productImage: greenWristWatch,
+    bgColor: "#3C6351",
+    positionImage: "bottom-24 scale-150",
   },
 };
+
+export const products = [
+  {
+    id: 1,
+    price: 77600,
+    title: "New S150 Adjustable Drone",
+    rating: 11.6,
+    image: drone,
+  },
+  {
+    id: 2,
+    price: 45000,
+    title: "Oculus Quest 2 VR",
+    rating: 2.4,
+    image: vrg,
+  },
+  {
+    id: 3,
+    price: 918739,
+    title: "Samsung 55inch Ultra HD",
+    rating: 28,
+    image: ledTv,
+  },
+  {
+    id: 4,
+    price: 350000,
+    title: "Canon 550D  Digital Camera",
+    rating: 4,
+    image: camera,
+  },
+  {
+    id: 5,
+    price: 60500,
+    title: "Nokia Phone",
+    rating: 1.6,
+    image: nokia,
+  },
+  {
+    id: 6,
+    price: 419000,
+    title: "iPhone 12 128GB ROM",
+    rating: 30,
+    image: iphoneNew,
+  },
+  {
+    id: 7,
+    price: 8500,
+    title: "Samsung Earphone",
+    rating: 1,
+    image: earpiece,
+  },
+  {
+    id: 8,
+    price: 630000,
+    title: "iPad Pro 9.7 inch",
+    rating: 80,
+    image: laptopGold,
+  },
+];
+
+
