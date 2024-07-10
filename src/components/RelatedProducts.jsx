@@ -5,8 +5,8 @@ import Product from "./Product"
 
 const RelatedProducts = () => {
   return (
-    <section className="m-10 font-Montserrat">
-        <h4 className=" mb-4 font-semibold text-[40px]"> Suggested Products</h4>
+    <section className="m-10 font-Montserrat mt-16">
+        <h4 className=" mb-4 font-semibold text-3xl"> Suggested Products</h4>
         <ul className="grid grid-cols-4 auto-rows-[400px] gap-x-10 gap-y-20">
             {
                 relatedProducts.map(product => (

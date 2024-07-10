@@ -2,14 +2,14 @@ import headphone from "../assets/headphone.png";
 
 const Hero = () => {
   return (
-    <div className="hero min-h-screen px-10 ">
-      <div className="rounded-[3.8rem] p-20 flex flex-col gap-20 relative bg-[#C4C4C4] overflow-hidden">
+    <div className="hero min-h-screen xl:px-10  ">
+      <div className="rounded-[3.8rem] xl:p-20 p-10 flex flex-col gap-20 relative bg-[#C4C4C4] overflow-hidden">
 
         <header className="relative top-20">
           <h1 className="flex flex-col font-Poppins mb-6">
             <span className="font-medium text-3xl mb-4">Beats by Dre</span>
             <span className=" font-bold text-7xl">Wireless</span>
-            <span className="font-Montserrat font-bold text-[8.5rem] text-white">
+            <span className="font-Montserrat font-bold xl:text-[11.7dvw] text-[12.5dvw] text-white">
               HEADPHONES
             </span>
           </h1>
@@ -34,7 +34,7 @@ const Hero = () => {
           <img
             src={headphone}
             alt="product image"
-            className="rotate-[25deg] translate-x-20 translate-y-8 object-cover scale-125"
+            className="rotate-[25deg] translate-x-20 translate-y-8 object-cover xl:scale-125 scale-110 relative xl:left-0 left-20 xl:bottom-0 bottom-10"
           />
         </div>
 

@@ -6,6 +6,7 @@ import { Header } from '../../utils/data'
 import RelatedProducts from "../../components/RelatedProducts";
 import Description from "../../components/Description";
 import Quantity from "../../components/Quantity";
+import iphone from '../../assets/iphoneNew.png'
 
 const Cart = () => {
   const navigate = useNavigate()
@@ -23,9 +24,9 @@ const Cart = () => {
         <p className="font-medium text-xl mb-4">Product Details</p>
 
 
-        <div className="grid grid-cols-2 gap-10 ">
+        <div className="grid grid-cols-2 gap-10 h-[75vh]">
           <div className="bg-[#D9D9D9] rounded-3xl">
-            {/* <img src={iphone} alt="Product photo" className="w-full h-full" /> */}
+            <img src={iphone} alt="Product photo" className="w-full h-full object-cover" />
           </div>
 
           <div>

@@ -1,16 +1,16 @@
-const ProductDetailCardA = ({
+const CategoryCardA = ({
   itemImage,
   tag,
   subHeading,
   heading,
   bgColor,
   headingColor,
-  customImagePosition
+  customImagePosition,
 }) => {
   return (
     <article
       style={{ backgroundColor: bgColor, boxShadow:`0 4 4 0 ${`${bgColor}40`}` }}
-      className={`flex-1 flex items-end rounded-[3.75rem] px-6 pb-10 relative`}
+      className={` flex items-end rounded-[3.75rem] px-6 pb-10 relative`}
     >
       <img src={itemImage} alt="category image" className={`absolute ${customImagePosition}`} />
 
@@ -36,4 +36,4 @@ const ProductDetailCardA = ({
   );
 };
 
-export default ProductDetailCardA;
+export default CategoryCardA;

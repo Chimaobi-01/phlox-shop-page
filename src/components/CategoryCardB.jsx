@@ -1,16 +1,17 @@
-const ProductDetailCardB = ({
+const CategoryCardB = ({
   itemImage,
   tag,
   subHeading,
   heading,
-  customImagePosition
+  customImagePosition,
+  positionDiv,
 }) => {
   return (
     <article
       style={{  boxShadow:'0 4 4 0 #B5B7BB40' }}
-      className={`flex-[2] rounded-[3.75rem] bg-[#B5B7BB] relative grid grid-cols-2`}
+      className={`wide-item rounded-[3.75rem] bg-[#B5B7BB] relative grid grid-cols-2`}
     >
-      <div className="flex-1 flex flex-col gap-6 self-center ps-6">
+      <div className={`flex-1 flex flex-col gap-6 self-center ps-6 ${positionDiv}`}>
         <h2 className="flex flex-col gap-2 font-Poppins capitalize">
           <span className="font-normal text-xl ">{tag}</span>
           <span className="font-semibold text-4xl mb-2">{subHeading}</span>
@@ -33,4 +34,4 @@ const ProductDetailCardB = ({
   );
 };
 
-export default ProductDetailCardB;
+export default CategoryCardB;

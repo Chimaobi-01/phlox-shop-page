@@ -19,28 +19,26 @@ import laptopGold from "../assets/laptopGold.png";
 import greenWristWatch from "../assets/greenWristWatch.png";
 import hotHeadphone2 from "../assets/hot-headphone2.png";
 
-
 import Header from "../components/Header";
 import Hero from "../components/Hero";
-import ProductDetailCardA from "../components/ProductDetailCardA";
-import ProductDetailCardB from "../components/ProductDetailCardB";
+import CategoryCardA from "../components/CategoryCardA";
+import CategoryCardB from "../components/CategoryCardB";
 import HotDeals from "../components/HotDeals";
 import Services from "../components/Services";
 import Products from "../components/Products";
 import Footer from "../components/Footer";
 import Categories from "../components/Categories";
 
-
 export {
   Header,
   Hero,
-  ProductDetailCardA,
-  ProductDetailCardB,
+  CategoryCardA,
+  CategoryCardB,
   HotDeals,
   Services,
   Products,
   Footer,
-  Categories
+  Categories,
 };
 
 export const category = {
@@ -61,21 +59,24 @@ export const category = {
     heading: "gadgets",
     itemImage: wristwatch,
     customImagePosition:
-      "h-[65.66%] max-w-[66.66%] -top-[3.5rem] -right-1 rotate-[24deg]",
+      "h-[65.66%] max-w-[66.66%] xl:scale-100 scale-110 xl:-top-[3.5rem] -top-[2.6rem] xl:-right-1 right-2 rotate-[24deg]",
   },
   laptops: {
     tag: "trending",
     subHeading: "devices",
     heading: "laptop",
     itemImage: laptop,
-    customImagePosition: "scale-y-125 right-6 scale-x-110",
+    customImagePosition:
+      "xl:scale-y-125 scale-y-100 right-6 xl:scale-x-110 scale-x-100 xl:top-0 -top-[3rem]",
   },
   games: {
     tag: "best",
     subHeading: "gaming",
     heading: "console",
     itemImage: playstation,
-    customImagePosition: "bottom-12 scale-x-105 scale-y-125 right-0 ",
+    customImagePosition: "bottom-[7rem] scale-x-105 right-0 ",
+    positionDiv: "relative bottom-[5rem]",
+    changeItemPosition: "gameCard",
   },
   charging: {
     bgColor: "#6C87A5",
@@ -86,6 +87,7 @@ export const category = {
     itemImage: powerbank,
     customImagePosition:
       "h-[90.66%] w-full -top-[5rem] -right-4 scale-125 -rotate-[14deg]",
+    changeItemPosition: "charger",
   },
   speaker: {
     bgColor: "#C33044",
@@ -96,6 +98,7 @@ export const category = {
     itemImage: speaker,
     customImagePosition:
       "h-[70.66%] max-w-[66.66%] -top-[2rem] -right-2 scale-110",
+    changeItemPosition: "speaker",
   },
 };
 
@@ -232,5 +235,5 @@ export const relatedProducts = [
     title: "Canon 550D  Digital Camera",
     rating: 4,
     image: camera,
-  }
+  },
 ];
