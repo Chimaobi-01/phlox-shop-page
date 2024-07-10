@@ -14,7 +14,7 @@ import {
 const Home = () => {
   return (
     <div>
-      <Header />
+      <Header showNav={true} />
       <Hero />
       <Categories />
       <section className="min-h-screen mx-10 flex flex-col overflow-hidden">

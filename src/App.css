@@ -35,11 +35,51 @@
   display: none;
 }
 
+.menu {
+  flex-direction: column;
+  gap: 0.2em;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+}
+.menu > span {
+  background: #000;
+  height: 2px;
+  border-radius: 0.2em;
+  width: 1.2em;
+  transition: all 0.4s;
+}
+.menu.active > span:first-child {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(2px, -2px);
+}
+
+.search-bar {
+  width: min(240px, 25vw);
+}
+
+
+
 @media screen and (max-width:1050px) {
   .switch-display > article:first-child {
     display: none;
   }
   .switch-display > article:last-child {
     display: grid;
+  }
+}
+@media screen and (max-width:425px) {
+  .menu > span {
+    width: 1.4em;
   }
 }
