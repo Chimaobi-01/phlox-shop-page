@@ -1,15 +1,20 @@
 import facebook from "../../assets/fb-social.svg";
 import instagram from "../../assets/instagram-social.svg";
 import whatsapp from "../../assets/whatsapp-social.svg";
-
-
+import { useNavigate } from 'react-router-dom';
 import { Header } from '../../utils/data'
-import { GiRoyalLove } from "react-icons/gi";
 import RelatedProducts from "../../components/RelatedProducts";
 import Description from "../../components/Description";
 import Quantity from "../../components/Quantity";
 
 const Cart = () => {
+  const navigate = useNavigate()
+
+  const goToCart = () => {
+    navigate('/cart')
+  }
+
+
   return (
     <div>
       <Header />
@@ -27,7 +32,7 @@ const Cart = () => {
             <Description />
             <div className="flex gap-6 mt-2.5">
               <Quantity />
-              <button className="flex-[1.5] self-start flex items-center justify-center h-16 bg-[#D02335] rounded-2xl uppercase text-[#F1F1F1] font-medium text-2xl">add to cart</button>
+              <button onClick={goToCart} className="flex-[1.5] self-start flex items-center justify-center h-16 bg-[#D02335] rounded-2xl uppercase text-[#F1F1F1] font-medium text-2xl">add to cart</button>
             </div>
 
 
