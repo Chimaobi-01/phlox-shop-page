@@ -74,8 +74,8 @@ export const category = {
     subHeading: "gaming",
     heading: "console",
     itemImage: playstation,
-    customImagePosition: "bottom-[7rem] scale-x-105 right-0 ",
-    positionDiv: "relative bottom-[5rem]",
+    customImagePosition: "md:bottom-[7rem] bottom-[4rem] lg:scale-x-105 lg:scale-y-100 scale-y-[.85] lg:right-0 md:right-10 right-0 ",
+    positionDiv: "relative md:bottom-[5rem]",
     changeItemPosition: "gameCard",
   },
   charging: {
@@ -134,7 +134,7 @@ export const hotDeals = {
       "No wahala for summer heat. Jam to your favorite beats with our headphone discount sale.",
     bgColor: "#C33044",
     productImage: hotHeadphone2,
-    positionImage: "bottom-36 scale-150 right-8",
+    positionImage: "-translate-y-20 lg:-translate-y-32 xl:-translate-y-40 scale-125 ",
   },
   blackFriday: {
     mainHeading: "mega deals",
@@ -144,7 +144,7 @@ export const hotDeals = {
       "Detty December don reach! Get all the latest tech at mega discounts.",
     productImage: greenWristWatch,
     bgColor: "#3C6351",
-    positionImage: "bottom-24 scale-125 -right-2",
+    positionImage: "-translate-y-16 xl:-translate-y-24 scale-110 ",
   },
 };
 

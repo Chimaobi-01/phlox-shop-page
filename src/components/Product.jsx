@@ -15,17 +15,17 @@ const Product = ({ price, title, rating, image, id }) => {
     }
 
     return (
-        <li className="flex flex-col gap-1">
-            <span onClick={goToCheckout} className="h-3/4 cursor-pointer rounded-[20px] relative bg-[#D9D9D9]">
+        <li className="flex flex-col">
+            <div onClick={goToCheckout} className="h-28 md:h-40 xl:h-80 xl:p-2 p-1.5 cursor-pointer rounded-2xl xl:rounded-[20px] relative bg-[#D9D9D9]">
                 <img src={image} alt="" className="w-full h-full object-contain" />
-                <span className="absolute bg-white top-4 right-4 w-10 h-10 rounded-full flex items-center justify-center">
+                <span className="absolute bg-white top-2 right-2 xl:top-3 xl:right-3 xl:h-10 xl:w-10 h-6 w-6 rounded-full flex items-center justify-center">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
                         strokeWidth={1.5}
                         stroke="currentColor"
-                        className="w-6 h-6 stroke-slate-500"
+                        className="w-4 h-4 xl:w-6 xl:h-6 stroke-slate-500"
                     >
                         <path
                             strokeLinecap="round"
@@ -34,19 +34,19 @@ const Product = ({ price, title, rating, image, id }) => {
                         />
                     </svg>
                 </span>
-            </span>
+            </div>
 
-            <div className="flex-1 flex items-center justify-between ">
-                <p className="flex flex-col font-Montserrat text-[#101010] gap-1">
-                    <span className="flex items-end mb-1 gap-0.5 font-medium text-sm text-[#000000CC]">
-                        <img src={star} alt="star" className="w-6 h-6 shrink-0" />({rating}k
+            <div className="flex-1 flex items-center gap-0.5 md:gap-1 xl:mt-2">
+                <p className="flex-1 flex flex-col font-Montserrat text-[#101010]">
+                    <span className="flex items-end font-medium xl:text-sm md:text-[10px] text-[6px] text-[#000000CC]">
+                        <img src={star} alt="star" className="md:w-4 md:h-4 h-3 w-3 shrink-0" />({rating}k
                         Reviews)
                     </span>
-                    <span className="font-medium text-xl ">{title}</span>
-                    <span className="font-semibold text-2xl"># {price}</span>
+                    <span className="font-medium xl:text-xl md:text-xs text-[8px]">{title}</span>
+                    <span className="font-semibold xl:text-2xl md:text-sm text-xs"># {price}</span>
                 </p>
-                <span onClick={goToCart} className="elipse cursor-pointer w-14 h-14 rounded-full bg-[#D02335] flex items-center justify-center">
-                    <img src={cart} alt="add to cart" className="shrink-0" />
+                <span onClick={goToCart} className="elipse cursor-pointer xl:w-14 xl:h-14 md:w-8 md:h-8 w-7 h-7 rounded-full bg-[#D02335] flex items-center justify-center shrink-0">
+                    <img src={cart} alt="add to cart" className="shrink-0 xl:w-auto xl:h-auto md:w-4 md:h-4 w-3.5 h-3.5" />
                 </span>
             </div>
         </li>

@@ -24,7 +24,7 @@ const Header = ({ showNav }) => {
 
 
     return (
-        <header className="flex items-center gap-8 lg:p-10 py-10 px-5 font-Montserrat md:border-none border-b-2 border-[#B5B7BB80]">
+        <header className="flex items-center gap-8 lg:p-10 py-10 md:px-6 px-4 font-Montserrat md:border-none border-b-2 border-[#B5B7BB80]">
 
             <img onClick={goToHome} src={logo} alt="phlox" className="shrink-0 cursor-pointer" />
 

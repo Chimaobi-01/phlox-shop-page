@@ -13,23 +13,16 @@ import {
 
 const Home = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Header showNav={true} />
       <Hero />
       <Categories />
-      <section className="min-h-screen mx-10 flex flex-col overflow-hidden">
-        <Services />
-        <HotDeals {...hotDeals.summer} />
-      </section>
-
+      <Services />
+      <HotDeals {...hotDeals.summer} />
       <Products />
-
-      <div className="pt-48 pb-16 flex items-center mx-10">
-        <HotDeals {...hotDeals.blackFriday} />
-      </div>
-        <Sponsors />
-        <Footer />
-
+      <HotDeals {...hotDeals.blackFriday} />
+      <Sponsors />
+      <Footer showAllFooter={true} />
     </div>
   );
 };
