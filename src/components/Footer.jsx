@@ -8,10 +8,10 @@ import logo from "../assets/logo.jpg";
 
 const Footer = ({ showAllFooter, footerHeight }) => {
     return (
-        <footer className={`${footerHeight} py-10 flex flex-col font-Montserrat`}>
+        <footer className={`${footerHeight} pt-10 flex flex-col font-Montserrat`}>
             {
                 showAllFooter && (
-                    <div className="flex-1 flex md:items-center xl:items-start section-padding">
+                    <div className="flex-1 flex md:items-center xl:items-start section-padding mb-24">
                         <div className="flex-[1.3] flex flex-col ">
                             <img src={logo} alt="logo" className="h-auto w-16 lg:w-28" />
                             <p className="font-normal italic text-[#9F9E9E] text-xs lg:text-base py-2">
