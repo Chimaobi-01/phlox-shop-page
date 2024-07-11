@@ -6,9 +6,9 @@ import {
 } from "react-icons/fa";
 import logo from "../assets/logo.jpg";
 
-const Footer = ({ showAllFooter, customClass }) => {
+const Footer = ({ showAllFooter, footerHeight }) => {
     return (
-        <footer className={`${customClass} h-screen lg:h-[calc(100vh-200px)] pt-10 flex flex-col font-Montserrat`}>
+        <footer className={`${footerHeight} pt-10 flex flex-col font-Montserrat`}>
             {
                 showAllFooter && (
                     <div className="flex-1 flex md:items-center xl:items-start section-padding">
