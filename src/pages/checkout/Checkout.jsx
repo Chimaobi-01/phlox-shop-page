@@ -4,16 +4,17 @@ import RelatedProducts from "../../components/RelatedProducts"
 import star from '../../assets/star.png'
 import Quantity from "../../components/Quantity"
 import phone from '../../assets/iphoneNew.png'
+import ProccedToCheckout from "../../components/ProccedToCheckout"
 
 
 const Checkout = () => {
     return (
         <div className="font-Montserrat">
             <Header />
-            <section className="flex m-10 gap-10">
-                <div className="flex-[2.5] flex items-center gap-4">
-                        <img src={phone} alt="" className="h-40 w-32 object-cover" />
-                    <div className="description-wrapper flex-[1.9] ps-4 border-l-2">
+            <section className="flex section-padding">
+                <div className="flex">
+                    <img src={phone} alt="" className="basis-32 object-cover" />
+                    <div className="description-wrapper ps-4 border-l-2">
                         <span className="font-bold flex flex-col">
                             <span className="text-3xl">iPhone 12 128GB ROM</span>
                             <span className="text-[#A2A4A8] text-xl">#780,000</span>
@@ -45,16 +46,8 @@ const Checkout = () => {
                     <Quantity />
                 </div>
 
-                <div className="checkout flex-1 rounded-3xl bg-[#D9D9D9] flex flex-col gap-6 font-medium uppercase p-4">
-                    <h4 className=" text-2xl text-[#00000099]">cart summary</h4>
-                    <div className="flex items-center justify-between">
-                        <span className=" text-lg">2</span>
-                        <span className="font-bold text-3xl">#780,000</span>
-                    </div>
-                    <button className=" bg-[#D02335] py-4 uppercase rounded-2xl text-2xl text-[#F1F1F1]">procced to checkout</button>
-                </div>
+                <ProccedToCheckout />
             </section>
-
             <RelatedProducts />
             <Footer />
         </div>

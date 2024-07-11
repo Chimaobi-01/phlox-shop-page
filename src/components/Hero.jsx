@@ -2,7 +2,7 @@ import headphone from "../assets/headphone.png";
 
 const Hero = () => {
   return (
-    <div className="hero min-h-screen lg:px-10 section-padding md:pt-0 pt-8">
+    <div className="hero md:min-h-screen lg:px-10 section-padding md:pt-0 pt-8">
       <div className=" lg:rounded-[3.8rem] md:rounded-[2.8rem] rounded-[1.8rem] flex flex-col gap-20 relative bg-[#C4C4C4] xl:p-20 lg:p-10 md:p-6 p-4 py-8">
 
         <header className="relative md:top-20 top-16">

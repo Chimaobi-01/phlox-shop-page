@@ -22,7 +22,7 @@ const Home = () => {
       <Products />
       <HotDeals {...hotDeals.blackFriday} />
       <Sponsors />
-      <Footer showAllFooter={true} footerHeight={"h-screen lg:h-[calc(100vh-200px)]"} />
+      <Footer showAllFooter={true} footerHeight={"md:h-screen lg:h-[calc(100vh-200px)]"} />
     </div>
   );
 };

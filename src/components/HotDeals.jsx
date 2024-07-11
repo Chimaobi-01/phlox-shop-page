@@ -9,7 +9,7 @@ const HotDeals = ({
   positionImage
 }) => {
   return (
-    <div className="h-[calc(100vh-100px)] flex items-center justify-center section-padding">
+    <div className="md:h-[calc(100vh-100px)] py-16 md:py-0 flex items-center justify-center section-padding">
       <article
         style={{ backgroundColor: bgColor }}
         className=" md:rounded-[40px] lg:rounded-[60px] rounded-[20px] w-full h-1/2 md:h-3/4 xl:h-5/6 flex justify-between items-center text-white relative px-4 py-8 xl:px-0 xl:py-0"

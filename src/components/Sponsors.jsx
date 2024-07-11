@@ -5,7 +5,7 @@ import sponsor3 from '../assets/sponsor3.png'
 
 const Sponsors = () => {
     return (
-        <div className="h-[calc(100vh-200px)] flex flex-col">
+        <div className="h-[calc(100vh-200px)] flex flex-col py-10 md:py-0">
             <h4 className="font-Montserrat text-center mb-10 font-semibold text-3xl xl:text-4xl hidden md:block">
                 Sponsors
             </h4>
