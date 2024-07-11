@@ -8,7 +8,7 @@ import logo from "../assets/logo.jpg";
 
 const Footer = ({ showAllFooter, footerHeight }) => {
     return (
-        <footer className={`${footerHeight} pt-10 flex flex-col font-Montserrat`}>
+        <footer className={`${footerHeight} py-10 flex flex-col font-Montserrat`}>
             {
                 showAllFooter && (
                     <div className="flex-1 flex md:items-center xl:items-start section-padding">
