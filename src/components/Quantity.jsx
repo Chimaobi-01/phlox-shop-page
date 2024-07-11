@@ -1,21 +1,20 @@
-import { GiRoyalLove } from "react-icons/gi"
 
 const Quantity = () => {
     return (
-            <span className="flex-1 flex flex-col gap-2">
-                <span className="flex h-16 text-3xl border-[#191919B2] border rounded-tl-xl rounded-bl-xl rounded-tr-xl rounded-br-xl">
+            <span className="flex-1 lg:flex-none flex flex-col basis-[95px] md:gap-1">
+                <span className="flex xl:h-16 md:text-2xl text-lg border-[#19191971] border rounded-tl-xl md:rounded-tl-2xl rounded-bl-xl md:rounded-bl-2xl rounded-tr-xl md:rounded-tr-2xl rounded-br-xl md:rounded-br-2xl">
                     <button className="flex-1 bg-[#E0E0E0] flex items-center justify-center rounded-tl-xl rounded-bl-xl">-</button>
-                    <span className="flex-[1.2] flex items-center justify-center">1</span>
+                    <span className="flex-[1.2] flex items-center justify-center md:py-1">1</span>
                     <button className="flex-1 bg-[#E0E0E0] flex items-center justify-center rounded-tr-xl rounded-br-xl">+</button>
                 </span>
-                <button className="text-[#618295] flex items-center tracking-wide justify-between px-3 uppercase font-Montserrat font-medium">
+                <button className="text-[#618295] flex items-center tracking-wide gap-2 uppercase font-Montserrat font-medium text-[6px] md:text-sm">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
                         strokeWidth={1.5}
                         stroke="currentColor"
-                        className="w-6 h-6 stroke-slate-500"
+                        className="md:w-7 md:h-7 w-3.5 h-3.5 stroke-slate-500"
                     >
                         <path
                             strokeLinecap="round"

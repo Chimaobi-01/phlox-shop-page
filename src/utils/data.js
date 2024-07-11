@@ -231,9 +231,9 @@ export const relatedProducts = [
   },
   {
     id: 4,
-    price: 350000,
-    title: "Canon 550D  Digital Camera",
-    rating: 4,
-    image: camera,
+    price: 918739,
+    title: "Samsung 55inch Ultra HD",
+    rating: 28,
+    image: ledTv,
   },
 ];
