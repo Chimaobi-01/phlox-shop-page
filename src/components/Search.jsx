@@ -1,7 +1,9 @@
 import search from '../assets/search.svg'
 import CartIcon from './CartIcon'
 
+
 const Search = () => {
+
   return (
     <label className='relative flex'>
         <img src={search} alt="search" className='absolute top-2.5 left-3 shrink-0 xl:top-0' />

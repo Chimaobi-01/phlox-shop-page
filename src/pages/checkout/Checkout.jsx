@@ -17,7 +17,7 @@ const Checkout = () => {
                     <span className="basis-[61px] md:basis-[160px]">
                         <img src={phone} alt="" className="w-full h-full object-cover" />
                     </span>
-                    <div className="flex-1 flex gap-1 ml-2 pl-2 md:pl-4 border-l-2">
+                    <div className="flex-1 flex gap-1 md:gap-8 xl:gap-36 ml-2 pl-2 md:pl-4 border-l-2">
                         <CheckoutDescription />
                         <ProccedToCheckout />
                     </div>
