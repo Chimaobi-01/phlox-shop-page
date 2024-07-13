@@ -8,7 +8,7 @@ const Products = () => {
 
   useEffect(() => {
 
-    axios.get('/api/products?organization_id=e5b66405b71d44b58a1f36694e5d5489&Appid=RU083NB9JVH8J4Y&Apikey=acea970f32b744da8f09eaecadb49a6020240713122926900475')
+    axios.get('https://api.timbu.cloud/products?organization_id=e5b66405b71d44b58a1f36694e5d5489&Appid=RU083NB9JVH8J4Y&Apikey=acea970f32b744da8f09eaecadb49a6020240713122926900475')
       .then(response => {
         setProducts(response.data.items)
       })
