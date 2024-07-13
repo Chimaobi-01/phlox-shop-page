@@ -1,7 +1,7 @@
 
 
 const ProccedToCheckout = ({ item }) => {
-    const total = item.quantity * item.current_price[0].NGN[0]
+    const total = item.quantity * (item.current_price[0].NGN[0] ?? item.current_price)
     return (
         <div className="basis-[97px] max-h-32 md:basis-[185px] xl:basis-[300px] rounded-[10px] bg-[#D9D9D9] flex flex-col p-1.5 font-medium uppercase lg:p-3">
             <h4 className=" text-[8px] md:text-xs lg:text-sm xl:text-2xl text-[#00000099] mb-auto mt-4">cart summary</h4>

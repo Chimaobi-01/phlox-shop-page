@@ -2,7 +2,7 @@ import CheckoutQuantity from "./CheckoutQuantity"
 import star from '../assets/star.png'
 
 const CheckoutDescription = ({ item, handleDecreaseQuantity, handleIncreaseQuantity }) => {
-    console.log(item);
+    const price = item.current_price[0].NGN[0] ?? item.current_price
     return (
         <div className="flex-1 flex gap-1.5 md:gap-6 xl:gap-16 flex-wrap overflow-hidden">
             <div className="flex-[75%] md:flex-[40%]">
@@ -10,7 +10,7 @@ const CheckoutDescription = ({ item, handleDecreaseQuantity, handleIncreaseQuant
                     <span className="md:text-base lg:text-3xl text-xs leading-4 ">
                         {item.name}
                     </span>
-                    <span className="text-[#A2A4A8] md:text-lg lg:text-xl text-[10px]">NGN{item.current_price[0].NGN[0].toLocaleString()}</span>
+                    <span className="text-[#A2A4A8] md:text-lg lg:text-xl text-[10px]">NGN{price.toLocaleString()}</span>
                 </div>
                 <div className="description-and-review font-medium flex flex-col gap-1.5 md:gap-2.5">
                     <span className="flex items-center gap-1.5 text-[6px] md:text-[10px] lg:text-sm">
