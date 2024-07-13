@@ -3,13 +3,13 @@ import iphone from '../assets/iphone13.png'
 import star from '../assets/star.png'
 
 
-const Description = () => {
+const Description = ({ name, description, current_price }) => {
     
     return (
         <>
             <div className="title-and-subtitle font-bold flex flex-col mb-0.5 md:mb-1.5">
-                <span className="md:text-4xl xl:text-5xl text-base leading-4">iPhone 12 128GB ROM</span>
-                <span className="text-[#A2A4A8] md:text-2xl xl:text-3xl text-xs">#780,000</span>
+                <span className="md:text-4xl xl:text-5xl text-base leading-4">{name}</span>
+                <span className="text-[#A2A4A8] md:text-2xl xl:text-3xl text-xs">NGN{current_price}</span>
             </div>
             <div className="description-and-review font-medium flex flex-col gap-1.5 md:gap-2.5">
                 <span className="flex items-center gap-1.5 text-[6px] md:text-sm xl:text-base">
@@ -17,10 +17,7 @@ const Description = () => {
                     <span className="text-[#618295]">Apple | Similar products from Apple</span>
                 </span>
                 <p className='text-[8px] md:text-sm xl:text-base'>
-                    Beats by Dre remains a leader in premium headphones,
-                    leveraging its strong brand identity and association
-                    with music icons to target young, style-conscious
-                    consumers who prioritize.
+                    { description }
                     <button className='font-medium'>See More</button>
                 </p>
                 <span className="flex items-center gap-1 text-[6px] md:text-sm xl:text-base">

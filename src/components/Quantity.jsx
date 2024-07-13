@@ -1,11 +1,13 @@
 
-const Quantity = () => {
+const Quantity = ({ quantity, handleDecreaseQuantity, handleIncreaseQuantity }) => {
+
+
     return (
             <span className="flex-1 lg:flex-none flex flex-col basis-[95px] md:gap-1">
                 <span className="flex xl:h-16 md:text-2xl text-lg border-[#19191971] border rounded-tl-xl md:rounded-tl-2xl rounded-bl-xl md:rounded-bl-2xl rounded-tr-xl md:rounded-tr-2xl rounded-br-xl md:rounded-br-2xl">
-                    <button className="flex-1 bg-[#E0E0E0] flex items-center justify-center rounded-tl-xl rounded-bl-xl">-</button>
-                    <span className="flex-[1.2] flex items-center justify-center md:py-1">1</span>
-                    <button className="flex-1 bg-[#E0E0E0] flex items-center justify-center rounded-tr-xl rounded-br-xl">+</button>
+                    <button onClick={handleDecreaseQuantity} className="flex-1 bg-[#E0E0E0] flex items-center justify-center rounded-tl-xl rounded-bl-xl">-</button>
+                    <span className="flex-[1.2] flex items-center justify-center md:py-1">{quantity || 1}</span>
+                    <button onClick={handleIncreaseQuantity} className="flex-1 bg-[#E0E0E0] flex items-center justify-center rounded-tr-xl rounded-br-xl">+</button>
                 </span>
                 <button className="text-[#618295] flex items-center tracking-wide gap-2 uppercase font-Montserrat font-medium text-[6px] md:text-sm">
                     <svg
