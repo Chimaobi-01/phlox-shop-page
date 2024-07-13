@@ -16,26 +16,12 @@ const ProductDetail = () => {
   const navigate = useNavigate();
   const { id } = useParams()
   const [product, setProduct] = useState(null)
-  const { addToCart, cart, removeFromCart, increaseQuantity, decreaseQuantity } = useCart();
+  const { addToCart, cart } = useCart();
 
 
   const handleAddToCart = () => {
     addToCart(product);
     navigate("/cart");
-  };
-
-  const handleIncreaseQuantity = () => {
-    console.log('click', cart);
-    const isProductPresent = cart.find(item => item.id === product.id)
-    if(isProductPresent === undefined){
-      addToCart(product)
-      return
-    }
-    increaseQuantity(product.id);
-  };
-
-  const handleDecreaseQuantity = (productId) => {
-    decreaseQuantity(productId);
   };
 
 
@@ -87,11 +73,7 @@ const ProductDetail = () => {
               current_price={product.current_price.toLocaleString()}
             />
             <div className="flex mt-2.5 md:mt-3.5 gap-2 md:gap-4 items-center flex-wrap-reverse">
-              <Quantity 
-                quantity={cart.quantity} 
-                handleDecreaseQuantity={handleDecreaseQuantity}
-                handleIncreaseQuantity={handleIncreaseQuantity}
-                 />
+              <Quantity />
               <button
                 onClick={handleAddToCart}
                 className="flex-1 lg:flex-none basis-[120px] self-end flex items-center justify-center bg-[#D02335] md:rounded-2xl rounded-[10px] uppercase text-[#F1F1F1] font-medium md:text-xl xl:text-2xl text-xs py-1.5 px-4"
