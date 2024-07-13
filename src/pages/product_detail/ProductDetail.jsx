@@ -20,7 +20,14 @@ const ProductDetail = () => {
 
 
   const handleAddToCart = () => {
-    addToCart(product);
+    const cartProduct = {
+      name: product.name,
+      current_price: [{NGN:[product.current_price]}],
+      photos: product.photos,
+      id: product.id,
+      description: product.description
+    }
+    addToCart(cartProduct);
     navigate("/cart");
   };
 
