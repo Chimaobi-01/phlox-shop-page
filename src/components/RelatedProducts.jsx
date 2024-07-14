@@ -9,8 +9,12 @@ const RelatedProducts = () => {
   const relatedProducts = products.slice(0,3)
 
   useEffect(() => {
+    const apiKey = import.meta.env.VITE_API_KEY
+    const appId = import.meta.env.VITE_APP_ID
+    const baseUrl = import.meta.env.VITE_BASE_URL
+    const organizationId = import.meta.env.VITE_ORGANIZATION_ID
 
-    axios.get('https://api.timbu.cloud/products?organization_id=e5b66405b71d44b58a1f36694e5d5489&Appid=RU083NB9JVH8J4Y&Apikey=acea970f32b744da8f09eaecadb49a6020240713122926900475')
+    axios.get(`${baseUrl}/products?organization_id=${organizationId}&Appid=${appId}&Apikey=${apiKey}`)
       .then(response => {
         setProducts(response.data.items)
       })

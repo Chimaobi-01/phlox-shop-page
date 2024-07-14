@@ -2,7 +2,7 @@ import React from 'react'
 
 const CheckoutQuantity = ({ item, handleDecreaseQuantity, handleIncreaseQuantity }) => {
     return (
-        <span className=" flex flex-col basis-28 md:basis-32 lg:basis-44 xl:basis-56 md:self-center">
+        <div className="flex-1 flex flex-col md:basis-32 lg:basis-44 xl:basis-56 md:self-center relative right-2 top-1">
             <span className="flex md:text-2xl text-sm border-[#19191971] border rounded-tl-xl md:rounded-tl-2xl rounded-bl-xl md:rounded-bl-2xl rounded-tr-xl md:rounded-tr-2xl rounded-br-xl md:rounded-br-2xl">
                 <button onClick={()=> handleDecreaseQuantity(item.id)} className="flex-1 bg-[#E0E0E0] flex items-center justify-center rounded-tl-xl rounded-bl-xl">-</button>
                 <span className="flex-[1.2] flex items-center justify-center md:py-1">{item.quantity}</span>
@@ -25,7 +25,7 @@ const CheckoutQuantity = ({ item, handleDecreaseQuantity, handleIncreaseQuantity
                 </svg>
                 add to wishlist
             </button>
-        </span>
+        </div>
     )
 }
 

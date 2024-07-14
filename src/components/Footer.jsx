@@ -68,7 +68,7 @@ const Footer = ({ showAllFooter, footerHeight }) => {
                 )
             }
 
-            <div className="section-padding py-6 text-xs md:text-base  bg-black text-[#C4C4C4] flex items-center justify-between">
+            <div className="section-padding py-6 sm:text-xs text-[8px] md:text-base  bg-black text-[#C4C4C4] flex items-center justify-between">
                 <p>© 2022 Phlox Digital Shop.All Rights Reserved</p>
                 <p>Privacy Policy . Term Condition</p>
             </div>

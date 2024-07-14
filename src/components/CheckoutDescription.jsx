@@ -4,10 +4,10 @@ import star from '../assets/star.png'
 const CheckoutDescription = ({ item, handleDecreaseQuantity, handleIncreaseQuantity }) => {
     const price = item.current_price[0].NGN[0] ?? item.current_price
     return (
-        <div className="flex-1 flex gap-1.5 md:gap-6 xl:gap-16 flex-wrap overflow-hidden">
-            <div className="flex-[75%] md:flex-[40%]">
+        <div className="basis-3/4 xl:basis-4/6 flex gap-1.5 md:gap-6 xl:gap-16 ps-2 ms-2 xl:ps-6 xl:ms-6 border-l-2 ">
+            <div className="basis-[75%] sm:basis-[60%]">
                 <div className=" font-bold flex flex-col mb-0.5 md:mb-1.5">
-                    <span className="md:text-base lg:text-3xl text-xs leading-4 ">
+                    <span className="md:text-base lg:text-3xl text-xs leading-4 line-clamp-1">
                         {item.name}
                     </span>
                     <span className="text-[#A2A4A8] md:text-lg lg:text-xl text-[10px]">NGN{price.toLocaleString()}</span>
@@ -27,7 +27,7 @@ const CheckoutDescription = ({ item, handleDecreaseQuantity, handleIncreaseQuant
                         </ul>
                         <span>(11.k Reviews)</span>
                     </span>
-                    <p className='text-[6px] md:text-[10px] lg:text-base text-ellipsis'>
+                    <p className='text-[6px] md:text-[10px] lg:text-base line-clamp-4'>
                        {item.description}
                         <button className='font-medium'>See More</button>
                     </p>
