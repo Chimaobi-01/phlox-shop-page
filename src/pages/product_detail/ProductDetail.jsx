@@ -1,6 +1,6 @@
 
 import { useNavigate, useParams } from "react-router-dom";
-import { Footer, Header } from "../../utils/data";
+import { apiKey, appId, baseUrl, Footer, Header, organizationId } from "../../utils/data";
 import RelatedProducts from "../../components/RelatedProducts";
 import Description from "../../components/Description";
 import Quantity from "../../components/Quantity";
@@ -34,7 +34,7 @@ const ProductDetail = () => {
 
   useEffect(() => {
 
-    axios.get(`https://api.timbu.cloud/products/${id}?organization_id=e5b66405b71d44b58a1f36694e5d5489&Appid=RU083NB9JVH8J4Y&Apikey=acea970f32b744da8f09eaecadb49a6020240713122926900475`)
+    axios.get(`${baseUrl}/products/${id}?organization_id=${organizationId}&Appid=${appId}&Apikey=${apiKey}`)
       .then(response => response.data)
       .then(data => setProduct(data))
       .catch(error => {

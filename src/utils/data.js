@@ -29,6 +29,11 @@ import Products from "../components/Products";
 import Footer from "../components/Footer";
 import Categories from "../components/Categories";
 
+const apiKey = import.meta.env.VITE_API_KEY;
+const appId = import.meta.env.VITE_APP_ID;
+const baseUrl = import.meta.env.VITE_BASE_URL;
+const organizationId = import.meta.env.VITE_ORGANIZATION_ID;
+
 export {
   Header,
   Hero,
@@ -39,6 +44,10 @@ export {
   Products,
   Footer,
   Categories,
+  apiKey,
+  appId,
+  baseUrl,
+  organizationId
 };
 
 export const category = {
@@ -74,7 +83,8 @@ export const category = {
     subHeading: "gaming",
     heading: "console",
     itemImage: playstation,
-    customImagePosition: "md:bottom-[7rem] bottom-[4rem] lg:scale-x-105 lg:scale-y-100 scale-y-[.85] lg:right-0 md:right-10 right-0 ",
+    customImagePosition:
+      "md:bottom-[7rem] bottom-[4rem] lg:scale-x-105 lg:scale-y-100 scale-y-[.85] lg:right-0 md:right-10 right-0 ",
     positionDiv: "relative md:bottom-[5rem]",
     changeItemPosition: "gameCard",
   },
@@ -134,7 +144,8 @@ export const hotDeals = {
       "No wahala for summer heat. Jam to your favorite beats with our headphone discount sale.",
     bgColor: "#C33044",
     productImage: hotHeadphone2,
-    positionImage: "-translate-y-20 lg:-translate-y-32 xl:-translate-y-40 scale-125 ",
+    positionImage:
+      "-translate-y-20 lg:-translate-y-32 xl:-translate-y-40 scale-125 ",
   },
   blackFriday: {
     mainHeading: "mega deals",

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import Product from "./Product"
 import axios from "axios"
+import { apiKey, appId, baseUrl, organizationId } from "../utils/data"
 
 
 
@@ -9,10 +10,6 @@ const RelatedProducts = () => {
   const relatedProducts = products.slice(0,3)
 
   useEffect(() => {
-    const apiKey = import.meta.env.VITE_API_KEY
-    const appId = import.meta.env.VITE_APP_ID
-    const baseUrl = import.meta.env.VITE_BASE_URL
-    const organizationId = import.meta.env.VITE_ORGANIZATION_ID
 
     axios.get(`${baseUrl}/products?organization_id=${organizationId}&Appid=${appId}&Apikey=${apiKey}`)
       .then(response => {

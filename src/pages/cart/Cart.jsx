@@ -1,11 +1,9 @@
 import Footer from "../../components/Footer"
 import Header from "../../components/Header"
 import RelatedProducts from "../../components/RelatedProducts"
-import phone from '../../assets/iphoneNew.png'
 import ProccedToCheckout from "../../components/ProccedToCheckout"
 import CheckoutDescription from "../../components/CheckoutDescription"
 import { useCart } from "../../services/CartContext"
-import { useEffect, useState } from "react"
 import { MdDeleteOutline } from "react-icons/md"
 
 
