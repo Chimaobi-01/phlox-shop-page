@@ -2,7 +2,7 @@ import { category, CategoryCardA, CategoryCardB } from "../utils/data";
 
 const Categories = () => {
   return (
-    <section className="min-h-screen lg:px-10 px-4 mt-20 ">
+    <section className=" lg:px-10 px-4 mt-20 ">
       <div className="category-grid gap-6 lg:mb-20 mb-16 ">
         <CategoryCardA {...category.phone} />
         <CategoryCardA {...category.gadgets} />

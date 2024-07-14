@@ -28,9 +28,12 @@ const Product = ({ name, photos, current_price, id, description }) => {
     }
 
     return (
-        <li className="flex flex-col">
-            <div onClick={()=>goToProductDetailPage(id)} className="h-28 md:h-40 xl:h-80 xl:p-2 p-1.5 cursor-pointer rounded-2xl xl:rounded-[20px] relative bg-[#D9D9D9]">
-                <img src={image} alt="" className="w-full h-full object-contain" />
+        <li 
+        className={`grid grid-rows-3 w-full product-item group`}>
+            <div 
+                onClick={()=>goToProductDetailPage(id)} 
+                className=" cursor-pointer bg-[#d9d9d9] rounded-2xl xl:rounded-[20px] relative overflow-hidden ">
+                <img src={image} alt="" className="product-image w-full h-full object-cover rounded-2xl xl:rounded-[20px] group-hover:scale-110" />
                 <span className="absolute bg-white top-2 right-2 xl:top-3 xl:right-3 xl:h-10 xl:w-10 h-6 w-6 rounded-full flex items-center justify-center">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -49,16 +52,16 @@ const Product = ({ name, photos, current_price, id, description }) => {
                 </span>
             </div>
 
-            <div className="flex-1 flex items-center gap-0.5 md:gap-1 xl:mt-2">
-                <p className="flex-1 flex flex-col font-Montserrat text-[#101010]">
+            <div className="flex gap-0.5 md:gap-1 xl:mt-2">
+                <p className=" w-3/4 flex flex-col font-Montserrat text-[#101010]">
                     <span className="flex items-end font-medium xl:text-sm md:text-[10px] text-[6px] text-[#000000CC]">
                         <img src={star} alt="star" className="md:w-4 md:h-4 h-3 w-3 shrink-0" />(20.8k
                         Reviews)
                     </span>
-                    <span className="font-medium xl:text-xl md:text-xs text-[8px]">{name}</span>
+                    <span className="line-clamp-1 md:line-clamp-2 font-medium xl:text-xl md:text-xs text-[8px]">{name}</span>
                     <span className="font-semibold xl:text-2xl md:text-sm text-xs">NGN{price}</span>
                 </p>
-                <span onClick={handleAddToCart} className="elipse cursor-pointer xl:w-14 xl:h-14 md:w-8 md:h-8 w-7 h-7 rounded-full bg-[#D02335] flex items-center justify-center shrink-0">
+                <span onClick={handleAddToCart} className="self-center cursor-pointer xl:w-14 xl:h-14 md:w-8 md:h-8 w-7 h-7 rounded-full bg-[#D02335] flex items-center justify-center shrink-0">
                     <img src={cart} alt="add to cart" className="shrink-0 xl:w-auto xl:h-auto md:w-4 md:h-4 w-3.5 h-3.5" />
                 </span>
             </div>

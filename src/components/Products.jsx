@@ -1,14 +1,28 @@
 import { useEffect, useState } from "react"
 import Product from "./Product"
 import axios from "axios"
+import Pagination from "./Pagination"
 
 
 const Products = () => {
   const [products, setProducts] = useState([])
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+  const totalPages = Math.ceil(products.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentData = products.slice(startIndex, startIndex + itemsPerPage);
+
+  const handleClick = (page) => {
+    setCurrentPage(page);
+  };
 
   useEffect(() => {
+    const apiKey = import.meta.env.VITE_API_KEY
+    const appId = import.meta.env.VITE_APP_ID
+    const baseUrl = import.meta.env.VITE_BASE_URL
+    const organizationId = import.meta.env.VITE_ORGANIZATION_ID
 
-    axios.get('https://api.timbu.cloud/products?organization_id=e5b66405b71d44b58a1f36694e5d5489&Appid=RU083NB9JVH8J4Y&Apikey=acea970f32b744da8f09eaecadb49a6020240713122926900475')
+    axios.get(`${baseUrl}/products?organization_id=${organizationId}&Appid=${appId}&Apikey=${apiKey}`)
       .then(response => {
         setProducts(response.data.items)
       })
@@ -18,17 +32,22 @@ const Products = () => {
   }, [])
 
 
-
   return (
     <section className=" section-padding xl:my-24">
       <h4 className="font-Montserrat text-center mb-12 font-semibold xl:text-[40px] md:text-3xl text-xl">Best Seller Products</h4>
       <ul className="grid md:grid-cols-4 grid-cols-3 xl:auto-rows-[430px] md:auto-rows-[250px] auto-rows-[180px] gap-3 md:gap-5 xl:gap-8 xl:gap-y-16">
         {
-          products.map(product => (
+          currentData.map(product => (
             <Product key={product.id} {...product} />
           ))
         }
       </ul>
+      <Pagination
+        totalPages={totalPages}
+        currentPage={currentPage}
+        handleClick={handleClick}
+      />
+
     </section>
   )
 }

@@ -2,14 +2,14 @@ import headphone from "../assets/headphone.png";
 
 const Hero = () => {
   return (
-    <div className="hero md:min-h-screen lg:px-10 section-padding md:pt-0 pt-8">
+    <div className="hero lg:px-10 section-padding md:pt-0 pt-8">
       <div className=" lg:rounded-[3.8rem] md:rounded-[2.8rem] rounded-[1.8rem] flex flex-col gap-20 relative bg-[#C4C4C4] xl:p-20 lg:p-10 md:p-6 p-4 py-8">
 
         <header className="relative md:top-20 top-16">
           <h1 className="flex flex-col font-Poppins mb-6">
             <span className="font-medium lg:text-3xl md:text-2xl text-xl md:mb-4 mb-1">Beats by Dre</span>
             <span className=" font-bold lg:text-7xl md:text-6xl text-4xl">Wireless</span>
-            <span className="font-Montserrat font-bold bold-display text-white ">
+            <span className="font-Montserrat font-bold text-[10.5vw] sm:text-[11.5vw] text-white ">
               HEADPHONES
             </span>
           </h1>
