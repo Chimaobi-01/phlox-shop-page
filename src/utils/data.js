@@ -27,7 +27,7 @@ import HotDeals from "../components/HotDeals";
 import Services from "../components/Services";
 import Products from "../components/Products";
 import Footer from "../components/Footer";
-import Categories from "../components/Categories";
+import Categories from "../components/Categories ";
 
 const apiKey = import.meta.env.API_KEY;
 const appId = import.meta.env.APP_ID;
