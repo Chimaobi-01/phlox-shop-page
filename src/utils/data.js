@@ -29,10 +29,10 @@ import Products from "../components/Products";
 import Footer from "../components/Footer";
 import Categories from "../components/Categories";
 
-const apiKey = import.meta.env.VITE_API_KEY;
-const appId = import.meta.env.VITE_APP_ID;
-const baseUrl = import.meta.env.VITE_BASE_URL;
-const organizationId = import.meta.env.VITE_ORGANIZATION_ID;
+const apiKey = import.meta.env.API_KEY;
+const appId = import.meta.env.APP_ID;
+const baseUrl = import.meta.env.BASE_URL;
+const organizationId = import.meta.env.ORGANIZATION_ID;
 
 export {
   Header,
