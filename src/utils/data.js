@@ -29,6 +29,7 @@ import Products from "../components/Products";
 import Footer from "../components/Footer";
 import Categories from "../components/Categories";
 
+
 const apiKey = import.meta.env.VITE_API_KEY;
 const appId = import.meta.env.VITE_APP_ID;
 const baseUrl = import.meta.env.VITE_BASE_URL;
