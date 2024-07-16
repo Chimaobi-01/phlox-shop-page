@@ -1,7 +1,13 @@
+import { useNavigate } from "react-router-dom"
 
 
 const ProccedToCheckout = ({ item }) => {
+    const navigate = useNavigate()
     const total = item.quantity * (item.current_price[0].NGN[0] ?? item.current_price)
+
+    const goToCheckout = () => {
+        navigate('/checkout')
+    }
 
 
     return (
@@ -12,7 +18,8 @@ const ProccedToCheckout = ({ item }) => {
                     <span className=" text-[6px] md:text-[8px] lg:text-[10px] xl:text-lg">Total</span>
                     <span className="font-bold text-[10px] md:text-xs lg:text-sm xl:text-3xl">NGN{total.toLocaleString()}</span>
                 </div>
-                <button className=" bg-[#D02335] p-2 uppercase rounded-xl xl:rounded-[20px] text-[8px] md:text-base xl:text-2xl text-[#F1F1F1] line-clamp-1 xl:py-3">
+                <button onClick={goToCheckout}
+                 className=" bg-[#D02335] p-2 uppercase rounded-xl xl:rounded-[20px] text-[8px] md:text-base xl:text-2xl text-[#F1F1F1] line-clamp-1 xl:py-3">
                      checkout
                 </button>
             </div>
