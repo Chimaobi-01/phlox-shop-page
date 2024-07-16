@@ -1,11 +1,12 @@
 // Checkout.js
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ShareProduct from '../../components/ShareProduct';
 import Header from '../../components/Header';
 import cartLogo from '../../assets/cart.svg'
 import { useCart } from '../../services/CartContext';
+import { useNavigate } from 'react-router-dom';
 
 
 const Checkout = () => {
@@ -18,6 +19,10 @@ const Checkout = () => {
         cvv: '',
     });
     const { cart } = useCart();
+    const navigate = useNavigate()
+    const [isSuccess, setIsSuccess] = useState(false);
+
+
     const totalPrice = cart.reduce((prev, curr) =>{
         let quantity = curr.quantity
         let price = curr.current_price[0].NGN[0] ?? curr.current_price
@@ -41,6 +46,7 @@ const Checkout = () => {
 
         // Process the payment (this is where you'd integrate with a payment processor)
         toast.success('Payment successful!');
+        setIsSuccess(true);
 
         // Reset the form
         setFormData({
@@ -52,6 +58,22 @@ const Checkout = () => {
             cvv: '',
         });
     };
+
+
+    useEffect(() => {
+        if (isSuccess) {
+          const timer = setTimeout(() => {
+            navigate('/');
+          }, 3000); // Redirect to home after 3 seconds
+    
+          return () => clearTimeout(timer); // Cleanup the timer
+        }
+      }, [isSuccess, navigate]);
+
+
+
+
+
 
     return (
         <section className="font-Montserrat section-padding min-h-[calc(100vh-200px)] flex flex-col gap-6 xl:pt-10">

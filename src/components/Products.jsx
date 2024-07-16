@@ -5,8 +5,8 @@ import Pagination from "./Pagination"
 import { apiKey, appId, baseUrl, organizationId } from "../utils/data"
 
 
-const Products = () => {
-  const [products, setProducts] = useState([])
+const Products = ({ products }) => {
+
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
   const totalPages = Math.ceil(products.length / itemsPerPage);
@@ -16,18 +16,6 @@ const Products = () => {
   const handleClick = (page) => {
     setCurrentPage(page);
   };
-
-  useEffect(() => {
-
-    axios.get(`${baseUrl}/products?organization_id=${organizationId}&Appid=${appId}&Apikey=${apiKey}`)
-      .then(response => {
-        setProducts(response.data.items)
-      })
-      .catch(error => {
-        console.error('There was an error fetching the data!', error);
-      });
-  }, [])
-
 
   return (
     <section className=" section-padding xl:my-24">
