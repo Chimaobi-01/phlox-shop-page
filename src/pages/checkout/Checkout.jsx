@@ -18,7 +18,7 @@ const Checkout = () => {
         expiryDate: '',
         cvv: '',
     });
-    const { cart } = useCart();
+    const { cart, removeFromCart } = useCart();
     const navigate = useNavigate()
     const [isSuccess, setIsSuccess] = useState(false);
 
@@ -57,6 +57,9 @@ const Checkout = () => {
             expiryDate: '',
             cvv: '',
         });
+
+        // Reset cart 
+        cart.map(item => removeFromCart(item.id))
     };
 
 
